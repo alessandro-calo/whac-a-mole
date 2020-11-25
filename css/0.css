@@ -1,0 +1,81 @@
+/* the whole page */
+body {
+    font-size: 35px;
+    background: #98BCF4;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* any button (but there's only one) */
+button {
+    width: 155px;
+    font-size: 35px;
+    height: 60px;
+    color: green;
+    background: transparent;
+    border: 3px solid green;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-top: 90px;
+}
+
+button:active {
+    border: 5px solid green;
+}
+
+button:disabled {
+  color: gray;
+  border: 2px dashed gray;
+}
+
+.score {
+    background: transparent;
+    border: 3px solid;
+    border-radius: 8px;
+    padding: 9px 18px 4px 18px;
+    line-height: 1;
+    color: yellow;
+    margin-left: 15px;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole:after {
+    display: block;
+    background: url('https://romeojeremiah.github.io/whack-a-mole/dirt.png') bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole {
+    background: url('https://romeojeremiah.github.io/whack-a-mole/mole.png') bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.mole.up {
+    top: 0;
+}
