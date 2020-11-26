@@ -1,4 +1,4 @@
-# Whac-a-mole Game Javascript Tutorial
+# Whack-a-mole Game Javascript Tutorial
 
 0) HTML
     - In the HTML file, add the `"up"` class to the mole and watch it appear!
@@ -29,16 +29,16 @@
     - inside `startGame()`, wait 1.4s (1400ms 😉) and call `peep()` again, forever
         - tip: use `setInterval(action, time)` where `action` is the name of the `peep()` function, and `time` is a number in milliseconds
 
-4) WHAC
-    - create a `whac()` function
+4) WHACK
+    - create a `whack()` function
     - *outside everything*, add an event listener to the mole: `moles[0].addEventListener('click', whack)`
-    - add a log to the `whac()` function to see if it works
+    - add a log to the `whack()` function to see if it works
         - tip: `console.log()`
 
-5) WHAC with CSS
+5) WHACK with CSS
     - remove the log if you want
-    - when you whac a mole, run `hide()` on that mole
-        - tip: `whac()` receives an `event` object as parameter. This event has a `target` property, which is the element that was clicked, which is the mole!
+    - when you whack a mole, run `hide()` on that mole
+        - tip: `whack()` receives an `event` object as parameter. This event has a `target` property, which is the element that was clicked, which is the mole!
 
 6) HTML
     - copy/paste the hole `<divd>` to make 6 holes, one after the other
@@ -58,7 +58,7 @@
         - question: do we use `const` or `let`?
     - set it to `0` when the game starts, before the call to `peep()`
     - show it when the game starts (update the HTML `scoreBoard` element, use the `textContent` property)
-    - increase it by 1 when you wack a mole (i.e. in the `whac()` function)
+    - increase it by 1 when you wack a mole (i.e. in the `whack()` function)
         - tip: first, write the expression for "your score plus 1 point". Then assign this expression to the score-keeping variable
     - show the new score immediately, like we did in `startGame()`
 
