@@ -51,16 +51,16 @@ function startGame() {
 <summary>Feeling lost? Expand to get a hint!</summary>
 
 ```javascript
+function startGame() {
+    // ...
+    peep()
+}
+
 async function peep() {
     const mole = moles[0]
     show(mole)
     await sleep(1000)
     hide(mole)
-}
-
-function startGame() {
-    // ...
-    peep()
 }
 ```
 </details>
@@ -92,12 +92,12 @@ function startGame() {
 <summary>Feeling lost? Expand to get a hint!</summary>
 
 ```javascript
+// ...
+
 // runs when a mole is whacked
 function whack() {
     console.log('Whackamole!')
 }
-
-// ...
 
 moles[0].addEventListener('click', whack)
 ```
@@ -122,7 +122,7 @@ function whack(event) {
 
 
 ### 6) HTML
-- in the HTML, copy/paste the hole `<div>` to make 6 holes, one after the other
+- in the HTML, copy/paste the hole `<div>` (and corresponding mole!) to make 6 holes, one after the other
 -  add event listeners to ALL the moles in the javascript code
     - hint: use a `for` loop
 
@@ -182,6 +182,8 @@ function randomMole() {
     const mole = moles[index]
     return mole
 }
+
+// ...
 
 async function peep() {
     const mole = randomMole()
@@ -277,9 +279,9 @@ function finish() {
 }
 
 async function startGame() {
-    // ...
+    // ... right after peep() was called
     const clock = setInterval(peep, 1400)
-    // ...
+    // ... after finish was called
     clearInterval(clock)
 }
 ```
