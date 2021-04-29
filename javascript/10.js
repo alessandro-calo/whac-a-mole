@@ -39,10 +39,10 @@ function finish() {
 
 // starts the game
 async function startGame() {
-    startButton.disabled = true
-    score = 0
     timeUp = false
+    score = 0
     scoreBoard.textContent = score
+    startButton.disabled = true
     peep()
     const clock = setInterval(peep, 1400)
 

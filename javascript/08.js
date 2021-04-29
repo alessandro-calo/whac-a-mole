@@ -33,9 +33,9 @@ function randomMole() {
 
 // starts the game
 function startGame() {
-    startButton.disabled = true
     score = 0
     scoreBoard.textContent = score
+    startButton.disabled = true
     peep()
     setInterval(peep, 1400)
 }
